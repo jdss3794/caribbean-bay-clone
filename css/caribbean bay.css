@@ -1,0 +1,636 @@
+@import url(../css/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.inner {
+  width: 960px;
+  margin: auto;
+}
+
+.wrapper {
+  min-width: 1200px;
+  width: 100%;
+}
+
+header {
+  background-color: #fff;
+  width: 100%;
+}
+
+.header-top {
+  background-color: #f6f6f6;
+}
+
+.top-bar {
+  display: flex;
+  font-size: 12px;
+}
+.top-bar li:first-child {
+  padding-right: 30px;
+}
+.top-bar li:nth-child(5) {
+  width: 150px;
+  text-align: center;
+  padding-top: 12px;
+  background-color: #f6f6f6;
+  color: #757575;
+  font-size: 15px;
+  border-bottom: solid 1px #aaa;
+}
+.top-bar li {
+  font-size: 0;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 0;
+}
+.util {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+  padding-left: 100px;
+}
+
+.util > li > a {
+  font-size: 12px;
+  padding: 0 10px;
+  border-right: 1px solid #aaa;
+  color: #666666;
+}
+
+.util > li:last-child > a {
+  border-right: 1px solid transparent;
+}
+
+/*----------s전체메뉴 컨트롤-------------*/
+
+.header-bottom {
+  padding: 0 0;
+  background-color: #fff;
+  height: 50px;
+  overflow: hidden;
+  width: 100%;
+  transition: height 0.35s;
+  border-bottom: 1px solid #666;
+  border-top: 3px solid #008de7;
+  padding-right: 300px;
+  position: absolute; /* 호버 고정시키기 */
+  z-index: 9999;
+}
+
+.header-bottom:hover {
+  height: 300px;
+}
+
+/*----------e전체메뉴 컨트롤-------------*/
+.header-bottom .inner {
+  padding: 0 12px;
+}
+
+.header-bottom .logo {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.header-bottom .gnb {
+  display: flex;
+  width: 700px;
+  justify-content: space-between;
+}
+
+nav {
+  margin-left: 100px;
+}
+
+.header-bottom .gnb .depth1 > a {
+  font-size: 17px;
+  color: #666666;
+  display: block;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  width: 240px;
+  margin-top: 5px;
+}
+
+.header-bottom .gnb .depth1:hover > a {
+  background-color: #008de7;
+  color: #fff;
+}
+
+.header-bottom .gnb .depth2 {
+  padding-top: 20px;
+}
+
+.header-bottom .gnb .depth2 > li > a {
+  font-size: 13px;
+  color: rgb(141, 141, 141);
+  display: block;
+  height: 30px;
+  line-height: 30px;
+}
+
+.header-bottom .gnb .depth2:hover > li a {
+  color: #008de7;
+  text-decoration: underline;
+}
+
+.main-banner {
+  height: 570px;
+  background-image: url(../cari-img/main-banner.jpg);
+  background-size: cover;
+  width: 100%;
+  margin: 0 auto;
+}
+.main-banner2 {
+  position: absolute;
+  left: 20%;
+}
+#nav {
+  position: absolute;
+  top: 117px;
+  right: 50%;
+  z-index: 100;
+  margin-right: -650px;
+  text-align: center;
+  color: white;
+}
+
+#nav li {
+  display: table;
+  margin: 10px 0 10px;
+  font-size: 15px;
+}
+
+#nav li:nth-child(2) {
+  color: #8e8e8e;
+}
+#nav li:nth-child(3) {
+  color: #8e8e8e;
+}
+#nav li.active a {
+  background-color: rgba(19, 78, 246, 1);
+  box-shadow: 5px 7px 20px 0 rgb(0 0 0 / 18%);
+}
+
+#nav li a .text-medium {
+  display: block;
+  font-style: normal;
+  letter-spacing: 0;
+}
+
+#nav li a {
+  display: table-cell;
+  width: 95px;
+  height: 95px;
+  border-radius: 100%;
+  background-color: rgba(221, 227, 242, 0.48);
+  vertical-align: middle;
+}
+
+.ticket-promotion {
+  padding: 60px 0;
+  background-color: #f7f7f7;
+}
+.content-inner {
+  margin: 0 auto;
+  width: 1000px;
+}
+.title-large {
+  position: relative;
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.title-large.line:before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #6f6f6f;
+  z-index: 1;
+}
+.title-large .title-bold {
+  display: inline-block;
+  position: relative;
+  z-index: 1000;
+  margin: 0 0 10px;
+  width: 379px;
+  color: #272830;
+  font-size: 38px;
+  font-weight: 900;
+  font-family: Montserrat, sans-serif;
+  line-height: 1;
+}
+.title-large.line .title-bold {
+  background-color: #fff;
+}
+.title-large .title-thin {
+  color: #272830;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.ticket-list {
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+
+.ticket-list .individual {
+  position: relative;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  height: 228px;
+  text-align: center;
+  display: flex;
+}
+
+.ticket-list .individual a {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ticket-list .individual img {
+  width: 62px;
+  height: 62px;
+  margin-left: 65px;
+  margin-top: 20px;
+}
+
+.ticket-list .individual .phrase {
+  margin: 12px 0 0;
+}
+
+.ticket-list .individual .phrase dt {
+  margin: 0 0 3px;
+  color: #272830;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.ticket-list .individual .phrase dd {
+  font-size: 15px;
+}
+.btn-area {
+  margin: 50px 0 0;
+  text-align: center;
+}
+
+.btn-area .card {
+  margin-right: 30px;
+  border: solid #134ef6;
+}
+
+.btn-area .btn-view {
+  display: inline-block;
+  padding: 8px 0;
+  width: 250px;
+  height: 45px;
+  border-radius: 30px;
+  border-width: 1px !important;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 5px 0 rgb(0 0 0 / 5%);
+}
+.btn-area .btn-text {
+  padding-right: 29px;
+  background: url(../cari-img/btn_arr_black.png) no-repeat 100%;
+  color: #444;
+  font-size: 15px;
+  font-style: normal;
+}
+.main-content a {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.information {
+  padding: 60px 0 70px;
+  background: #fff;
+}
+
+.content-inner {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.information-inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-notice {
+  box-sizing: border-box;
+  margin-right: 9px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  width: 325px;
+  height: 500px;
+  border: solid #e6e6e6;
+  border-width: 0 1px 2px;
+  border-top: 2px solid #134ef6;
+  background-color: #fff;
+}
+
+.water {
+  position: absolute;
+}
+
+.title-medium {
+  margin: 0 0 33px;
+  text-align: center;
+}
+
+.title-medium .title-bold {
+  display: inline-block;
+  margin: 0 0 5px;
+  color: #272830;
+  font-size: 28px;
+  font-weight: 800;
+  font-family: Montserrat, sans-serif;
+  line-height: 1;
+}
+
+.title-medium .title-thin {
+  color: #272830;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.news-notice .news-list li a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 16px 10px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1;
+  font-size: 13px;
+  color: rgb(81, 81, 81);
+  border-top: 1px solid rgb(228, 228, 228);
+  border-bottom: 1px solid rgb(228, 228, 228);
+  padding-bottom: 20px;
+}
+
+.news-notice .news-list li a:nth-child(5) {
+  padding-bottom: 30px;
+}
+.today {
+  box-sizing: border-box;
+  margin-right: 9px;
+  padding: 35px 20px 30px;
+  width: 325px;
+  height: 500px;
+  border: solid #e6e6e6;
+  border-width: 0 1px 2px;
+  border-top: 2px solid #134ef6;
+  background-color: #fff;
+}
+
+.today .today-date {
+  margin: 0 0 5px;
+  padding: 4px 0 10px 0;
+  border-top: 1px solid #ececec;
+  text-align: center;
+  color: #272830;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.today .today-time .text-time {
+  display: inline-block;
+  color: #134ef6;
+  font-size: 33px;
+  font-weight: 800;
+  font-family: Montserrat, sans-serif;
+  padding-bottom: 10px;
+}
+
+.today .today-time .text-small {
+  display: inline-block;
+  margin: 10px 15px 0 0;
+  color: #423b38;
+}
+
+.today .title-close {
+  color: #134ef6;
+  text-align: center;
+  font-size: 15px;
+}
+
+.interior {
+  padding-left: 10px;
+}
+.outside {
+  padding-left: 10px;
+}
+.text-operate {
+  padding: 20px 0 0;
+  text-align: center;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.today .btn-area .btn-view {
+  display: inline-block;
+  padding: 12px 0;
+  font-size: 13px;
+  width: 186px;
+  height: 38px;
+  border-radius: 30px;
+  border: 1px solid #144ff6;
+  color: #134ef6;
+  text-align: center;
+}
+
+.smart-reservation {
+  margin-right: 9px;
+  height: 500px;
+  border: solid #e6e6e6;
+  border-width: 0 1px 2px;
+  border-top: 2px solid #134ef6;
+  box-sizing: border-box;
+  width: 325px;
+  background-color: #fff;
+}
+
+.list-columns {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.list-columns .phrase {
+  padding-top: 10px;
+}
+
+.list-columns .phrase .text-medium {
+  padding-top: 10px;
+}
+
+.list-img {
+  overflow: hidden;
+  border-radius: 100%;
+  width: 215px;
+  height: 215px;
+}
+
+.btn-area .btn-view {
+  display: inline-block;
+  padding: 15px 0;
+
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid #565656;
+  text-align: center;
+}
+
+.smart-reservation .title-medium {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 35px 5px 0 0;
+  height: 129px;
+  background: url(../cari-img/bg_smart_reservation_title.gif) no-repeat;
+}
+
+.smart-reservation .title-medium .title-bold {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 700;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.smart-reservation .title-medium .title-thin {
+  color: #fff;
+}
+
+.smart-reservation .title-medium:after {
+  content: '';
+  position: absolute;
+  top: -18px;
+  right: -19px;
+  width: 106px;
+  height: 148px;
+  background: url(../cari-img/bg_smart_reservation_ico.png) no-repeat;
+}
+
+.title-medium .title-thin {
+  color: #272830;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.smart-link {
+  overflow: hidden;
+  padding-top: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.smart-link a {
+  padding: 0 20px 0 20px;
+  margin-top: 100px;
+}
+
+.smart-reservation .smart-link .text-link {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 30px 10px 0 10px;
+  width: auto;
+  height: 82px;
+  background-position: 0 50% !important;
+  color: #272830;
+  font-size: 16px;
+  font-style: normal;
+}
+
+.smart-reservation .phrase {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.phrase-2 {
+  padding-top: 10px;
+  padding-right: 20px;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.color-purple {
+  color: #6d2cb7;
+  font-size: 17px;
+}
+
+.footer_bg {
+  width: 100%;
+  margin-top: 60px !important;
+  background-color: #444b55;
+  color: #8e8e8e;
+}
+
+.f_site {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(218, 218, 218);
+  padding: 10px 300px 10px 0;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-menu ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  padding: 20px 0 10px 350px;
+}
+.footer-menu ul li:nth-child(4) {
+  color: #d1d1d1;
+}
+.footer-menu ul li:nth-child(5) {
+  color: #d1d1d1;
+}
+.footer-menu ul li:nth-child(6) {
+  color: #d1d1d1;
+}
+.address {
+  padding-left: 350px;
+  font-size: 12px;
+  line-height: 1.5;
+  height: 90px;
+}
+
+.address span {
+  color: #d1d1d1;
+}
+
+.escrow {
+  float: right;
+  background-color: white;
+  border-radius: 10px;
+  margin-right: 500px;
+  top: 0;
+}
